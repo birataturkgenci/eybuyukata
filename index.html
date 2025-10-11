@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +7,54 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Arka planda Nutuk sesi -->
+  <audio id="nutukAudio" autoplay loop>
+    <source src="nutuk.mp3" type="audio/mpeg">
+    Tarayıcınız audio etiketini desteklemiyor.
+  </audio>
+
   <header>
     <h1>Mustafa Kemal Atatürk</h1>
     <p>1881-1938 Sonsuza Dek</p>
   </header>
 
   <main>
-    <section>
+    <section class="parallax" id="hayat">
       <h2>Hayatı</h2>
-      <p>Mustafa Kemal Atatürk, 1881 yılında Selanik'te doğmuş, Türk milletinin bağımsızlığı için mücadele etmiş büyük bir liderdir. Türkiye Cumhuriyeti'nin kurucusu ve ilk cumhurbaşkanıdır.</p>
+      <div class="timeline">
+        <div class="event">
+          <p>
+            Mustafa Kemal Atatürk, 1881 yılında Selanik'te doğmuş, Türk milletinin bağımsızlığı için mücadele etmiş büyük bir liderdir. Türkiye Cumhuriyeti'nin kurucusu ve ilk cumhurbaşkanıdır. Türkiye'yi laik, sanayileşen bir ulusa dönüştüren kapsamlı ilerici reformlar üstlenmiştir. İdeolojik olarak sekülarist ve milliyetçi politikaları ve sosyo-politik teorileri Kemalizm olarak tanınmıştır.
+          </p>
+        </div>
+        <div class="event">
+          <h3>Eğitim ve Askerî Kariyer</h3>
+          <p>
+            Mustafa Kemal, 1893 yılında Selanik Askeri Rüştiyesi'ne girmiş ve burada "Kemal" adını almıştır. 1896 yılında Manisa Askeri İdadisi'ne kaydolmuş ve 1899 yılında İstanbul'da Harp Okulu'na girmiştir. 1905 yılında kurmay yüzbaşı olarak Harp Akademisi'ni bitirmiştir. Askerî kariyerine Şam'da 5. Ordu'da başlamış ve çeşitli görevlerde bulunmuştur.
+          </p>
+        </div>
+        <div class="event">
+          <h3>I. Dünya Savaşı ve Kurtuluş Savaşı</h3>
+          <p>
+            I. Dünya Savaşı sırasında Osmanlı ordusunda görev yapan Atatürk, Çanakkale Cephesi'nde miralaylığa, Sina ve Filistin Cephesi'nde ise Yıldırım Ordular Grubu komutanlığına atandı. Savaşın sonunda, Osmanlı İmparatorluğu'nun yenilgisini izleyen Kurtuluş Savaşı ile simgelenen Anadolu Hareketi'ne öncülük etti. Türk Kurtuluş Savaşı sürecinde Ankara Hükûmeti'ni kurdu, Türk Orduları Başkomutanı olarak Sakarya Meydan Muharebesi'nde başarı sağladı.
+          </p>
+        </div>
+        <div class="event">
+          <h3>Cumhuriyetin Kuruluşu ve Reformlar</h3>
+          <p>
+            29 Ekim 1923 tarihinde Türkiye Cumhuriyeti ilan edildi ve Mustafa Kemal, Cumhurbaşkanı olarak göreve başladı. Eğitim, hukuk, ekonomi, kültür ve sosyal alanda köklü reformlar gerçekleştirdi. Harf Devrimi, kadınlara seçme ve seçilme hakkı, soyadı kanunu, laiklik ilkesi ve sanayileşme gibi birçok önemli adım attı.
+          </p>
+        </div>
+        <div class="event">
+          <h3>Son Yılları ve Ölümü</h3>
+          <p>
+            Mustafa Kemal Atatürk, 10 Kasım 1938 tarihinde İstanbul'da vefat etti. Cenazesi geçici olarak Ankara Etnografya Müzesi'ne konuldu ve 10 Kasım 1953 tarihinde Anıtkabir'e nakledildi. Anıtkabir, Atatürk'ün anısını yaşatmak amacıyla inşa edilmiştir ve Türkiye'nin en önemli anıtlarından biridir.
+          </p>
+        </div>
+      </div>
     </section>
-    
-    <section>
+
+    <section class="parallax" id="ilkeler">
       <h2>İlkeleri</h2>
       <ul>
         <li>Cumhuriyetçilik</li>
@@ -29,7 +65,8 @@
         <li>İnkılapçılık</li>
       </ul>
     </section>
-    <section>
+
+    <section class="parallax" id="sozler">
       <h2>Veciz Sözleri</h2>
       <blockquote>
         "Benim naciz vücudum elbet bir gün toprak olacaktır; fakat Türkiye ilelebet payidar kalacaktır."
@@ -39,10 +76,21 @@
       </blockquote>
     </section>
 
-    <!--BUTON-->
+    <section id="medya">
+      <h2>Fotoğraf ve Videolar</h2>
+      <div class="media-gallery">
+        <img src="images/atatürk-1.jpg" alt="Atatürk Fotoğraf 1">
+        <img src="images/atatürk2.jpg" alt="Atatürk Fotoğraf 2">
+        <video controls>
+          <source src="videos/atatürk_video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
     <button onclick="saygiDurusu()">Saygı Duruşunda Bulun</button>
     <div id="anmaMesaji" style="display:none; font-size: 1.5em; margin-top: 20px; text-align: center;"></div>
   </main>
+
   <footer>
     <p>© 2025 Bir Atatürk Genci - Ey Büyük Ata!</p>
   </footer>
