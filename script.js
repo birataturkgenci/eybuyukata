@@ -1,14 +1,22 @@
 function saygiDurusu() {
-  // Sayfanın arka planı ve yazısını değiştirme
-  document.body.style.backgroundColor = "#000"; // siyah arka plan
-  document.body.style.color = "#fff"; // tüm yazılar beyaz
+  // Arka planı siyah yap
+  document.body.style.backgroundColor = "#000";
+
+  // Tüm metinleri beyaz yap
+  const tumYazilar = document.querySelectorAll("body *");
+  tumYazilar.forEach(el => {
+    const computed = window.getComputedStyle(el).color;
+    if (computed !== "rgb(255, 255, 255)") { // zaten beyazsa değiştirme
+      el.style.color = "#fff";
+    }
+  });
 
   // Blockquote elementlerini vurgulu yap
   const alintilar = document.querySelectorAll("blockquote");
   alintilar.forEach(b => {
-    b.style.color = "#ffeb3b"; // sarı gibi okunabilir bir renk
-    b.style.backgroundColor = "rgba(0,0,0,0.5)"; // siyaha yakın yarı şeffaf
-    b.style.borderLeftColor = "#ffeb3b"; // vurgulu
+    b.style.color = "#ffeb3b"; // okunabilir sarı
+    b.style.backgroundColor = "rgba(0,0,0,0.5)"; // yarı şeffaf siyah
+    b.style.borderLeftColor = "#ffeb3b";
   });
 
   // Mesajı gösterme
