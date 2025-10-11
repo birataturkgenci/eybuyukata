@@ -62,6 +62,7 @@ section h2 {
   margin-bottom: 20px;
 }
 
+/* Saygı duruşu için blockquote hover veya özel sınıf ekleyebiliriz */
 blockquote {
   font-style: italic;
   background-color: rgba(255,255,255,0.8);
@@ -69,6 +70,7 @@ blockquote {
   border-left: 5px solid #222;
   margin: 10px auto;
   max-width: 800px;
+  transition: all 0.5s ease; /* renk değişimleri için yumuşak geçiş */
 }
 
 /* Timeline */

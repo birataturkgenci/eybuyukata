@@ -1,14 +1,14 @@
 function saygiDurusu() {
   // Sayfanın arka planı ve yazısını değiştirme
-  document.body.style.backgroundColor = "black";
-  document.body.style.color = "white";
+  document.body.style.backgroundColor = "#000"; // siyah arka plan
+  document.body.style.color = "#fff"; // tüm yazılar beyaz
 
-  // Blockquote elementlerini beyaz yapma
+  // Blockquote elementlerini vurgulu yap
   const alintilar = document.querySelectorAll("blockquote");
   alintilar.forEach(b => {
-    b.style.color = "white";
-    b.style.backgroundColor = "rgba(255,255,255,0.1)";
-    b.style.borderLeftColor = "white";
+    b.style.color = "#ffeb3b"; // sarı gibi okunabilir bir renk
+    b.style.backgroundColor = "rgba(0,0,0,0.5)"; // siyaha yakın yarı şeffaf
+    b.style.borderLeftColor = "#ffeb3b"; // vurgulu
   });
 
   // Mesajı gösterme
@@ -21,7 +21,7 @@ function saygiDurusu() {
   buton.disabled = true;
   buton.innerText = "Saygı duruşu yapıldı.";
 
-  // Opsiyonel: yavaş fade-in animasyonu
+  // Yavaş fade-in animasyonu
   mesaj.style.opacity = 0;
   let op = 0;
   const fade = setInterval(() => {
